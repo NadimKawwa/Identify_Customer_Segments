@@ -55,6 +55,12 @@ The plot below shows a decreasing sum of squared distnaces as the number of clus
 Visually, we can determine a point of decreasing returns and set the number of clusters to 18 for the full KMeans algorithm.
 ![minikmeans](https://github.com/NadimKawwa/Identify_Customer_Segments/blob/master/plots/elbow_minik.png)
 
+# Visualizing Clusters
+
+What do our clusters look like? To answe this question we reduce our feature space to a two dimesional space and obtain the figure below.
+
+![pca_space](https://github.com/NadimKawwa/Identify_Customer_Segments/blob/master/plots/pca_space.png)
+
 
 # General Population Vs Clients
 
