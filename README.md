@@ -7,10 +7,12 @@ We will look at relationships between demographics features, organize the popula
 # The Dataset
 
 The datasets used here are provided coutesy of Bertelsmann partners AZ Direct and Arvato Financial Solutions. 
-One dataset is with emographic information about the people of Germany, the other is and one with that same information for customers of a mail-order sales company.
+One dataset is with demographic information about the people of Germany, the other is and one with that same information for customers of a mail-order sales company.
+
 Unfourtunately the datasets are proprietary of AZ Direct GmbH and can't be shared on this repository.
 Users interested in using the datasets should contact AZ Direct, or enroll in Udacity's Data Sciecne Nanodegree for an opporunity to work with it.
-That being said, the methods used here cam be applied to any unsupervised learning project.
+
+That being said, the methods used here can be applied to any unsupervised learning project.
 You can also read observations in the notebook to get a sense of what is in the dataset ;).
 
 # Libraries
@@ -23,6 +25,7 @@ You can also read observations in the notebook to get a sense of what is in the 
 - sklearn 
 - tqdm
 - pickle
+- scipy
 
 
 # Cleaning The Data
@@ -31,6 +34,7 @@ You can also read observations in the notebook to get a sense of what is in the 
 The first step includes significant data cleaning. The figure below shows a heatplot of missing values (NaN) in the dataset.
 We seek to maintain the maximum number of features and observations possible.
 For this reason we decide to drop features that have a signficant higher number of outliers larger than average.
+We also perform a Kolmogorov–Smirnov test to see if the distributions vary significantly between the cleaned dataset and omitted rows for some features.
 
 ![nan_heatmap](https://github.com/NadimKawwa/Identify_Customer_Segments/blob/master/plots/nan_heat.png)
 
