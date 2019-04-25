@@ -47,7 +47,8 @@ For the rows, say we find that on average each row has ~10% missing values, we d
 
 ## Feature Reduction
 
-Using sklearn's PCA package, we can obtain a low dimensional representation of our feature space. However before doing so we must clean our data of missing values for sklearn libraries to work properly. We decide to use the SimpleImputer and fill all missing values with the median observation for that feature. Keep in mind that how we treat missing values might significantly skew our analysis towards some conclusions. This step should be treated with caution. Furthermore, we scale each feature using the MinMaxScaler from sklearn.
+Using sklearn's PCA package, we can obtain a low dimensional representation of our feature space. However before doing so we must clean our data of missing values for sklearn libraries to work properly. We decide to use the SimpleImputer and fill all missing values with the median observation for that feature. Keep in mind that how we treat missing values might significantly skew our analysis towards some conclusions. By imputing we are diluting the importance of a feature: the variability in features is what allows us to use them to predict another variable well.This step should be treated with caution. Furthermore, we scale each feature using the MinMaxScaler from sklearn.
+
 The plot below shows the cumulative explained variance after performing PCA. We move with the analysis using this new feature space. Consequently, we can capture 95% of the variance by keeping half of the features.
 
 ![pca_cumsum](https://github.com/NadimKawwa/Identify_Customer_Segments/blob/master/plots/pca_cumsum_pre.png)
